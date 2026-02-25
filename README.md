@@ -9,4 +9,4 @@ Through these exercises, I am strengthening my knowledge of:
 - Clean code structure
 - Version control using Git
 
-This is part of my continuous learning journey in software development and data science.
+This is part of my continuous learning journey in data analytics and data science.
