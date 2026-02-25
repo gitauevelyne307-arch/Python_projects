@@ -1,85 +1,71 @@
+# % = remainder/modules sign
+# ** = exponentiation sign: multiply a no by itself a certain amount of times
+
+# BUILT_IN FUNCTIONS
+
+x = 3.14
+y = 4
+z = 5
+
+
+# ROUND(to a whole no)
+result = round(x)
+# Absolute (how far it is from zero without caring if its pstv or ngtv)
+result = abs(y)
+# Power = (needs base and exponate, multiply no certain times)
+result = pow(6,3)
+# Max & Min(find the highest and lowest value)
+result = max(x,y,z)
+result = min(x,y,z)
+print(result)
+
+
+# Constant functions
+
+import math
+
+x= 11.5
+print(math.pi)
+print(math.e)
+# Find square root
+result = math.sqrt(x)
+# Ceiling fnctn( rounds a number up to nearest whole number)
+result = math.ceil(x)
+# Floor (rounds to nearest whole number down)
+result = math.floor(x)
+print(result)
+
+
 # Exercise
-# 1: Python Calculator(Using If statements)
+# 1: Circumference of a circle = (2 * pi * radius)
 
-operator = input("Enter an operator(+, -, *, /): ")
-num1 = float(input("Enter num1: "))
-num2 = float(input("Enter num2: "))
+radius = float(input("Enter the radius of the circle: "))
+circumference = 2 * math.pi * radius
 
-if operator == "+":
-    result = (num1 + num2)
-    print(round(result,2))
-elif operator == "-":
-    result = (num1 - num2)
-    print(round(result,2))
-elif operator == "*":
-    result = (num1 * num2)
-    print(round(result,2))
-elif operator == "/":
-    result = (num1 / num2)
-    print(round(result,2))
-else:
-    print(f"{operator} is not a valid operator")
-
-#import grade
-
-# 2: Python Weight Converter
-
-weight = float(input("Enter your weight: "))
-unit = input("Kilograms or Pounds? (K or L): ")
-
-if unit == "K":
-    weight = weight * 2.205
-    unit = "Lbs."
-    print(f"Your weight is: {round(weight, 1)} {unit}")
-elif unit == "L":
-    weight = weight/2.205
-    unit = "Kgs."
-    print(f"Your weight is: {round(weight, 1)} {unit}")
-else:
-    print(f"{unit} is not a valid unit")
-
-# 3: Temperature conversion programme
-
-unit = input("Is the temperature in Celsius or Fahrenheit? (C/F): ")
-temp = float(input("Enter the temperature: "))
-if unit == "C":
-    temp = round((temp * 9) / 5 + 32, 1)
-    print(f"The temperature in Fahrenheit is: {temp}F")
-elif unit == "F":
-    temp = round((temp * 9) / 5 - 32, 1)
-    print(f"The temperature in Celsius is: {temp}C")
-else:
-    print(f"{unit} is not a valid unit of measurement")
+print(f"The circumference is: {round(circumference,2)} cm")
 
 
-# 4: Grading system
+# 2: Area of a circle(pi * radius^2)
 
-grade = int(input("Enter your grade: "))
+radius = float(input("Enter the radius of the circle: "))
+area = math.pi *  pow(radius,2)
+print(f"The area is: {round(area,2)} cm^2")
 
-if grade < 0 or grade > 100:
-    print("Invalid score")
-elif grade >= 80:
-    print("Grade A: Excellent")
-elif grade >= 60:
-    print("Grade B: Good Job")
-elif grade >= 40:
-    print("Grade C: Fair")
-else:
-    print("Fail: Needs improvement")
 
-# 5: ATM Withdrawal program
+# 3: Hypotenuse of triangle
 
-balance = float(input("Enter your balance: "))
-withdrawal_amount = float(input("Enter amount to withdraw: "))
+radius = float(input("Enter the radius of the circle: "))
+a = float(input("Enter side A: "))
+b = float(input("Enter side B: "))
 
-if withdrawal_amount <= 0:
-    print("Invalid withdrawal amount")
-elif withdrawal_amount > balance:
-    print("Withdrawal amount cannot be greater than balance")
-elif withdrawal_amount > 10000:
-    print("Withdrawal amount cannot be greater than 10,000")
-else:
-    balance = balance - withdrawal_amount
-    print("Withdrawal successful")
-    print("Remaining balance is: ", balance)
+c= math.sqrt(pow(a,2) + pow(b, 2))
+print(f"side c = {c}")
+
+
+# 4: Area of a rectangle
+
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+area = length * width
+print(f"The area is: {round(area,2)} cm^2")
 
