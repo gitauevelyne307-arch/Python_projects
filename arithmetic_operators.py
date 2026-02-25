@@ -1,5 +1,4 @@
-# Exercises
-
+# Exercise
 # 1: Python Calculator(Using If statements)
 
 operator = input("Enter an operator(+, -, *, /): ")
@@ -21,7 +20,7 @@ elif operator == "/":
 else:
     print(f"{operator} is not a valid operator")
 
-import grade
+#import grade
 
 # 2: Python Weight Converter
 
